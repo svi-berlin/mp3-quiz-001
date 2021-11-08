@@ -1,0 +1,22 @@
+{
+    "name": "mp3 quiz",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "quiz-mp3": "github:svi-berlin/quiz-mp3#081d4d81ba8eb934730661c49b0846483a58f299",
+        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "calliopemini"
+    ],
+    "preferredEditor": "blocksprj"
+}
