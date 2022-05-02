@@ -1,29 +1,10 @@
 function spieleIntro () {
     serialmp3.playMp3Folder(1, Mp3Repeat.No)
 }
-function test () {
-    if (input.buttonIsPressed(Button.A)) {
-        if (quizgestartet == 0) {
-            quizgestartet = 1
-            frage = 1
-        }
-    }
-    serialmp3.playMp3TrackFromFolder(frage, 2, Mp3Repeat.No)
-    frage = 2
-    if (input.buttonIsPressed(Button.A)) {
-        antwort = 2
-        serialmp3.playMp3TrackFromFolder(antwort, 2, Mp3Repeat.No)
-    } else {
-    	
-    }
-}
-let antwort = 0
-let quizgestartet = 0
-let frage = 0
 serialmp3.connectSerialMp3(DigitalPin.C16, DigitalPin.C17)
 basic.setLedColor(0x00ff00)
 spieleIntro()
-frage = 0
+let frage = 0
 basic.forever(function () {
     if (frage == 0) {
         if (input.buttonIsPressed(Button.A)) {
