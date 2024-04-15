@@ -1,5 +1,5 @@
 {
-    "name": "mp3 quiz",
+    "name": "mp3 quiz 1",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -15,6 +15,10 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "6.0.28",
+        "targetId": "calliopemini"
+    },
     "supportedTargets": [
         "calliopemini"
     ],
