@@ -1,5 +1,6 @@
 {
     "name": "Roboter Quiz 11052025",
+    "version": "0.1.0",
     "description": "",
     "dependencies": {
         "core": "*",
