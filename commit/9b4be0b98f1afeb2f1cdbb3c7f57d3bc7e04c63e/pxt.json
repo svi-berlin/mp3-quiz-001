@@ -1,0 +1,23 @@
+{
+    "name": "mp3-quiz-001-commit-9b4be0b98f1afeb2f1cdbb3c7f57d3bc7e04c63e",
+    "dependencies": {
+        "core": "*",
+        "mp3-quiz-001": "github:svi-berlin/mp3-quiz-001"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.3",
+        "targetId": "calliopemini"
+    },
+    "supportedTargets": [
+        "calliopemini"
+    ],
+    "preferredEditor": "blocksprj"
+}
