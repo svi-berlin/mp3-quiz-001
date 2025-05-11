@@ -1,25 +1,10 @@
 function spieleIntro () {
     serialmp3.playMp3Folder(1, Mp3Repeat.No)
 }
-function naechsteQuizFrage (num: number) {
-    if (fortschrittsanzeige == num) {
-        fortschrittsanzeige = num + 1
-        if (input.buttonIsPressed(Button.A)) {
-            basic.showNumber(fortschrittsanzeige)
-            serialmp3.playMp3TrackFromFolder(2, 2, Mp3Repeat.No)
-        } else {
-            if (input.buttonIsPressed(Button.B)) {
-                basic.showNumber(fortschrittsanzeige + 1)
-                serialmp3.playMp3TrackFromFolder(fortschrittsanzeige + 1, 2, Mp3Repeat.No)
-            }
-        }
-    }
-}
-let fortschrittsanzeige = 0
 serialmp3.connectSerialMp3(DigitalPin.C16, DigitalPin.C17)
 serialmp3.setMp3Volume(10)
 basic.setLedColor(0x00ff00)
-fortschrittsanzeige = 0
+let fortschrittsanzeige = 0
 let quizfrage1 = 1
 let quizfrage2 = 4
 let erstefragebeantwortet = 0
@@ -34,7 +19,19 @@ basic.forever(function () {
             fortschrittsanzeige = fragegestellt
         }
     }
-    naechsteQuizFrage(1)
+    if (fortschrittsanzeige == 1) {
+        if (input.buttonIsPressed(Button.A)) {
+            fortschrittsanzeige = 2
+            basic.showNumber(2)
+            serialmp3.playMp3TrackFromFolder(2, 2, Mp3Repeat.No)
+        } else {
+            if (input.buttonIsPressed(Button.B)) {
+                fortschrittsanzeige = 2
+                basic.showNumber(3)
+                serialmp3.playMp3TrackFromFolder(3, 2, Mp3Repeat.No)
+            }
+        }
+    }
     if (fortschrittsanzeige == 2) {
         if (input.buttonIsPressed(Button.A)) {
             fortschrittsanzeige = 3

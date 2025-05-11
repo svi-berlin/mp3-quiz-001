@@ -1,18 +1,16 @@
 {
-    "name": "Roboter Quiz 11052025",
-    "version": "0.1.0",
+    "name": "mp3 quiz 1",
     "description": "",
     "dependencies": {
         "core": "*",
+        "radio": "*",
         "quiz-mp3": "github:svi-berlin/quiz-mp3#081d4d81ba8eb934730661c49b0846483a58f299",
-        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8",
-        "funk": "*"
+        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md",
-        "tutorial-info-cache.json"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
