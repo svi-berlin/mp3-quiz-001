@@ -4,7 +4,7 @@ function spieleIntro () {
 serialmp3.connectSerialMp3(DigitalPin.C16, DigitalPin.C17)
 basic.showIcon(IconNames.Happy)
 serialmp3.setMp3Volume(30)
-basic.setLedColor(0x0000ff)
+basic.setLedColor(0xffff00)
 let fortschrittsanzeige = 0
 let quizfrage1 = 1
 let quizfrage2 = 4
