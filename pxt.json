@@ -1,11 +1,11 @@
 {
-    "name": "mp3 quiz 1",
+    "name": "Roboter Quiz 11052025",
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
         "quiz-mp3": "github:svi-berlin/quiz-mp3#081d4d81ba8eb934730661c49b0846483a58f299",
-        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8"
+        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8",
+        "funk": "*"
     },
     "files": [
         "main.blocks",
@@ -16,7 +16,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.28",
+        "target": "7.0.3",
         "targetId": "calliopemini"
     },
     "supportedTargets": [
