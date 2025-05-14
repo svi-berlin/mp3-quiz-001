@@ -5,7 +5,7 @@ serialmp3.connectSerialMp3(DigitalPin.C16, DigitalPin.C17)
 basic.showIcon(IconNames.Happy)
 serialmp3.setMp3Volume(30)
 basic.setLedColor(0xffff00)
-let lesen = 0
+let lesen = 1
 let fortschrittsanzeige = 0
 let quizfrage1 = 1
 let quizfrage2 = 4
@@ -21,10 +21,11 @@ basic.forever(function () {
             fortschrittsanzeige = fragegestellt
         } else {
             if (input.buttonIsPressed(Button.B)) {
-                for (let lesen = 0; lesen <= 9; lesen++) {
-                    lesen += 1
+                for (let index = 0; index < 9; index++) {
+                    basic.setLedColor(0x00ff00)
                     basic.showNumber(lesen)
                     serialmp3.playMp3TrackFromFolder(lesen, 3, Mp3Repeat.No)
+                    lesen += 1
                 }
             }
         }
